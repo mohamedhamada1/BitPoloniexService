@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Bitoasis</string>
+    <string name="Last_Traded_Price">Last Traded Price</string>
+    <string name="High">High</string>
+    <string name="Low">Low</string>
+    <string name="Highest_Bid">Highest Bid</string>
+    <string name="Lowest_Ask">Lowest Ask</string>
+    <string name="Change">Change</string>
+    <string name="Volume">Volume</string>
+    <string name="Email">Email..</string>
+    <string name="Password">Password..</string>
+    <string name="Sign_up">Sign up</string>
+    <string name="Login">Login</string>
+    <string name="Skip">Skip</string>
+    <string name="SplashScreen">Splash Screen</string>
+    <string name="Close">Close</string>
+    <string name="ConfirmPassword">Confirm Password..</string>
+    <string name="Mobile">Mobile..</string>
+    <string name="Ops_something_went_wrong">Oops, something went wrong, Please try again later</string>
+    <string name="Field_mandatory">Fields mandatory</string>
+    <string name="pass_validation">Password should be minimum 5 characters long</string>
+    <string name="email_validation">Email format is not correct.</string>
+    <string name="password_is_not_match">Password is not match</string>
+    <string name="Check_Your_internet_connection">Check your internet connection</string>
+    <string name="Email_already_registered">Your email already registered</string>
+    <string name="Your_account_has_been_created_successfully">Your account has been created successfully</string>
+    <string name="This_Mobile_Already_Registered">This Mobile is Already Registered</string>
+    <string name="Ok">Ok</string>
+    <string name="Something_went_wrong">Ops, Something went wrong try again later</string>
+    <string name="Change_design">Change design</string>
+    <string name="Currency_Pair_ID_number">Currency pair Id number </string>
+</resources>

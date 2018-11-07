@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "sa.bitoasis.bitoasis"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            buildConfigField("String", "BASE_URL", "\"https://app.mntrni.com/api/\"")
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "BASE_URL", "\"https://app.mntrni.com/api/\"")
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.github.navinilavarasan:rxWebSocket:v1.02'
+    implementation project(':Networkmodule')
+    compileOnly "org.projectlombok:lombok:$rootProject.lombok"
+    annotationProcessor "org.projectlombok:lombok:$rootProject.lombok"
+    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
+
+    // database
+    implementation "android.arch.persistence.room:rxjava2:$rootProject.roomDatabase"
+    annotationProcessor "android.arch.persistence.room:compiler:$rootProject.roomDatabase"
+
+    // dependency injecti
+    implementation "com.google.dagger:dagger:$rootProject.dagger2Version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.daggerCompiler"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$rootProject.daggerCompiler"
+    implementation "com.google.dagger:dagger-android-support:$rootProject.daggerCompiler"
+
+    implementation "android.arch.lifecycle:extensions:$rootProject.lifecycle"
+    implementation "android.arch.lifecycle:viewmodel:$rootProject.lifecycle"
+
+    implementation "com.google.guava:guava:$rootProject.guava"
+    implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
+
+
+
+}
